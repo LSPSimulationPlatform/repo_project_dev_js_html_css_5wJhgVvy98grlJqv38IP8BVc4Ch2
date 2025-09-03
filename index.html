@@ -1,1 +1,92 @@
-<h1 >  hello wolrl</h1>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for width */
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Create a New Book</h1>
+
+    <form id="createBookForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre">
+
+        <button type="submit">Create Book</button>
+    </form>
+
+    <script>
+        document.getElementById("createBookForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // You can add JavaScript code here to handle the form submission
+            // For example, you can collect the form data and send it to a server using AJAX.
+
+            const title = document.getElementById("title").value;
+            const author = document.getElementById("author").value;
+            const isbn = document.getElementById("isbn").value;
+            const description = document.getElementById("description").value;
+            const genre = document.getElementById("genre").value;
+
+            console.log("Book data:");
+            console.log("Title:", title);
+            console.log("Author:", author);
+            console.log("ISBN:", isbn);
+            console.log("Description:", description);
+            console.log("Genre:", genre);
+
+            alert("Book created (data logged to console)!");
+        });
+    </script>
+
+</body>
+</html>
+```
